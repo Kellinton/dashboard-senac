@@ -138,6 +138,9 @@ nav .navbar ul li a .nav-title {
 nav .navbar ul li a .nav-title:hover {
   background-color: rgba(231, 230, 234, 0.8);
 }
+.nav-title.ativo {
+  background-color: rgba(231, 230, 234, 0.8);
+}
 
 /*#endregion Barra de navegação*/
 

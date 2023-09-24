@@ -60,6 +60,9 @@
 <script>
     const nav = document.getElementById('menu');
     const gridContainer = document.querySelector('.grid-container');
+    const sections = document.querySelectorAll('section');
+    const titleSpans = nav.querySelectorAll('.nav-title');
+
 
     nav.addEventListener('mouseleave', () => {
         gridContainer.style.gridTemplateColumns = '100px 1fr';
@@ -74,6 +77,29 @@
         const titleSpans = nav.querySelectorAll('.nav-title');
         titleSpans.forEach(span => {
             span.style.display = 'inline-block';
+        });
+    });
+    titleSpans.forEach(span => {
+        span.addEventListener('click', () => {
+            // Remove a classe 'ativo' de todas as .nav-title
+            titleSpans.forEach(span => {
+                span.classList.remove('ativo');
+            });
+
+            // Adiciona a classe 'ativo' apenas à .nav-title clicada
+            span.classList.add('ativo');
+
+            // Obtém o índice da .nav-title clicada
+            const index = Array.from(titleSpans).indexOf(span);
+
+            // Mostra a seção correspondente e oculta as outras
+            sections.forEach((section, i) => {
+                if (i === index) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
         });
     });
 
