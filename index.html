@@ -32,7 +32,7 @@
                             style="color: #161925;"></i></span></i><span>Sair</span></button>
             </div>
         </header>
-        <nav>
+        <nav id="menu">
             <div class="navbar">
                 <ul>
                     <li><a href="#"><span class="nav-icon"><i class="fa-solid fa-house"
@@ -44,7 +44,7 @@
                     <li><a href="#"><span class="nav-icon"><i class="fa-solid fa-gear"
                                     style="color: #161925;"></i></span><span class="nav-title">Configurações</span></a>
                     </li>
-  
+
                 </ul>
             </div>
         </nav>
@@ -58,5 +58,26 @@
     </div>
 
 </body>
+<script>
+    const nav = document.getElementById('menu');
+    const gridContainer = document.querySelector('.grid-container');
 
+    nav.addEventListener('mouseleave', () => {
+        gridContainer.style.gridTemplateColumns = '100px 1fr';
+        const titleSpans = nav.querySelectorAll('.nav-title');
+        titleSpans.forEach(span => {
+            span.style.display = 'none';
+        });
+    });
+
+    nav.addEventListener('mouseenter', () => {
+        gridContainer.style.gridTemplateColumns = '300px 1fr';
+        const titleSpans = nav.querySelectorAll('.nav-title');
+        titleSpans.forEach(span => {
+            span.style.display = 'inline-block';
+        });
+    });
+
+    
+</script>
 </html>

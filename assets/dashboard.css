@@ -31,10 +31,12 @@ body {
 .grid-container {
   display: grid;
   grid-template-rows: repeat(4, auto);
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 100px 1fr;
   gap: 1%;
   overflow-y: hidden;
+  transition: grid-template-columns 0.3s ease;
 }
+
 
 header {
   background-color: var(--white);
@@ -61,8 +63,8 @@ header .perfil-info {
   gap: 20px;
 }
 header .perfil-info > .perfil-img {
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
 }
 header .perfil-info > .perfil-title {
   display: flex;
@@ -85,7 +87,7 @@ header .login .btn-sair {
   width: 6rem;
   border: none;
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.9s;
 }
 header .login .btn-sair:hover {
   background-color: rgba(186, 180, 204, 01);
@@ -123,7 +125,9 @@ nav .navbar ul li a {
   text-decoration: none;
 
 }
-
+nav .navbar ul li a .nav-icon{
+  font-size: 2rem;
+}
 nav .navbar ul li a .nav-title{
   text-align: center;
   width: 100%;
@@ -131,6 +135,7 @@ nav .navbar ul li a .nav-title{
   margin-left: 1rem;
   padding: 3%;
   transition: all 0.5s;
+  display: none;
 }
 nav .navbar ul li a .nav-title:hover{
   background-color: rgba(231, 230, 234, 0.8);
@@ -140,14 +145,14 @@ nav .navbar ul li a .nav-title:hover{
 
 
 section {
-  border-radius: 50px;
+  border-radius: 15px;
   background-color: rgba(146, 144, 151, 0.153);
   grid-column: 2 / -1;
   height: 15vh;
 }
 
 .grid-container main {
-  border-radius: 50px;
+  border-radius: 15px;
   background-color: rgba(146, 144, 151, 0.153);
   display: grid;
   grid-auto-rows: auto;
