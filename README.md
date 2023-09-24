@@ -1,6 +1,6 @@
 # dashboard-senac
 <p>
 
-<img width="400" height="1000" src="/to_readme/LayoutOficialWebDeQuebradaSenac.png">
+<img width="600" height="500" src="/to_readme/dash.png">
 
 </p>
