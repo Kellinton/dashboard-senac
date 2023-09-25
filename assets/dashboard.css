@@ -32,6 +32,9 @@ body {
   gap: 1%;
   overflow-y: hidden;
   transition: grid-template-columns 0.8s ease;
+  -webkit-transition: grid-template-columns 0.8s ease;
+  -o-transition: grid-template-columns 0.8s ease;
+  -moz-transition: grid-template-columns 0.8s ease;
 }
 
 /*#region Topo */
