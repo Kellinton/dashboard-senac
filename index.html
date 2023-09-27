@@ -15,6 +15,10 @@
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
+    <!--Sweet Alert-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.6/dist/sweetalert2.min.css">
+
     <!--CSS-->
     <link rel="stylesheet" href="assets/dashboard.css">
 </head>
@@ -71,7 +75,10 @@
         </main>
     </div>
 
-</body>
+
+    <!--SweetAlert-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.6/dist/sweetalert2.all.min.js"></script>
+
 <script>
     const nav = document.getElementById('menu');
     const gridContainer = document.querySelector('.grid-container');
@@ -120,10 +127,21 @@
 
     //temporário
     const bloqueio = document.getElementById('bloqueado');
-    
+
     bloqueio.addEventListener('click', function(){
-        alert('Sessão Indisponível');
+        // alert('Sessão Indisponível');
+        //SweetAlert
+        Swal.fire({
+        title: 'Sessão indisponível!',
+        icon: 'error', // Ícone: success, error, warning, etc.
+        confirmButtonText: 'OK'
     });
+
+    });
+
+    
 </script>
 
+
+</body>
 </html>
