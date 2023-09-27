@@ -192,3 +192,26 @@ nav .navbar ul li a .nav-title:hover {
     height: 83vh;
   }
 }
+
+
+
+
+/*temporário*/
+nav .navbar li:nth-child(2){
+  position: relative;
+}
+nav .navbar li:nth-child(2) .lock{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: rgb(188, 187, 190);
+}
+
+nav .navbar li:nth-child(2) .nav-title{
+  position: relative;
+  color: rgb(188, 187, 190)
+}
+nav .navbar li:nth-child(2) .nav-icon{
+  position: relative;
+  color: rgb(188, 187, 190)
+}
